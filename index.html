@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferrari Store - Concesionario virtual de automóviles deportivos">
+    <title>Ferrari Store | Concesionario</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+ <header class="header">
+    <div class="nav-container">
+
+        <a href="#inicio" class="ferrari-logo">
+            🐎
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="#racing">RACING</a>
+            <a href="#modelos">SPORTS CARS</a>
+            <a href="#colecciones">COLLEZIONI</a>
+            <a href="#experiencias">EXPERIENCIAS</a>
+            <a href="#nosotros">ABOUT US</a>
+        </nav>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </div>
+</header>
+
+<!-- ================= RACING ================= -->
+
+<section class="racing-section" id="racing">
+
+    <div class="racing-overlay"></div>
+
+    <div class="container racing-content">
+
+        <p class="section-subtitle">
+            FERRARI RACING
+        </p>
+
+        <h2>
+            NACIDOS PARA<br>
+            <span>COMPETIR.</span>
+        </h2>
+
+        <p>
+            La competición forma parte de la historia de Ferrari.
+            Velocidad, tecnología y pasión se combinan para crear
+            una experiencia única dentro y fuera de la pista.
+        </p>
+
+        <a href="#modelos" class="btn btn-primary">
+            DESCUBRIR SPORTS CARS
+        </a>
+
+    </div>
+
+</section>
+
+
+        <!-- ================= CARACTERÍSTICAS ================= -->
+        <section class="features">
+            <div class="container features-grid">
+
+                <div class="feature">
+                    <div class="feature-icon">🏎️</div>
+                    <h3>Alto rendimiento</h3>
+                    <p>Vehículos diseñados para ofrecer una experiencia deportiva.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Diseño exclusivo</h3>
+                    <p>Diseño italiano inspirado en la tradición automovilística.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Compra segura</h3>
+                    <p>Proceso de compra sencillo y validación de datos.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= MODELOS ================= -->
+        <section class="models section" id="modelos"></section>
+
+            <div class="container">
+
+                <div class="section-header">
+                    <p class="section-subtitle">NUESTRA COLECCIÓN</p>
+                    <h2>Modelos destacados</h2>
+                    <p>
+                        Explora nuestra selección de vehículos deportivos.
+                    </p>
+                </div>
+
+
+                <!-- FILTROS -->
+                <div class="filters">
+
+                    <button class="filter active" onclick="filtrarModelos('todos', this)">
+                        Todos
+                    </button>
+
+                    <button class="filter" onclick="filtrarModelos('deportivo', this)">
+                        Deportivos
+                    </button>
+
+                    <button class="filter" onclick="filtrarModelos('gt', this)">
+                        GT
+                    </button>
+
+                    <button class="filter" onclick="filtrarModelos('suv', this)">
+                        SUV
+                    </button>
+
+                </div>
+
+
+                <!-- CATÁLOGO -->
+                <div class="models-grid" id="catalogo">
+
+                    <!-- Ferrari 296 GTB -->
+                    <article class="car-card" data-category="deportivo">
+
+                        <div class="car-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1000&q=80"
+                                alt="Ferrari deportivo"
+                            >
+
+                            <span class="car-badge">DESTACADO</span>
+                        </div>
+
+                        <div class="car-content">
+
+                            <p class="car-type">DEPORTIVO</p>
+
+                            <h3>Ferrari 296 GTB</h3>
+
+                            <p class="car-description">
+                                Deportivo de alto rendimiento con diseño moderno.
+                            </p>
+
+                            <div class="specifications">
+                                <span>⚡ 830 CV</span>
+                                <span>🏁 330 km/h</span>
+                            </div>
+
+                            <div class="car-bottom">
+
+                                <div>
+                                    <span class="price-label">Desde</span>
+                                    <strong>$320,000</strong>
+                                </div>
+
+                                <button
+                                    class="btn-small"
+                                    onclick="verDetalles(1)"
+                                >
+                                    Detalles
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Ferrari Roma -->
+                    <article class="car-card" data-category="gt">
+
+                        <div class="car-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=80"
+                                alt="Ferrari GT"
+                            >
+                        </div>
+
+                        <div class="car-content">
+
+                            <p class="car-type">GT</p>
+
+                            <h3>Ferrari Roma</h3>
+
+                            <p class="car-description">
+                                Elegancia italiana combinada con prestaciones deportivas.
+                            </p>
+
+                            <div class="specifications">
+                                <span>⚡ 620 CV</span>
+                                <span>🏁 320 km/h</span>
+                            </div>
+
+                            <div class="car-bottom">
+
+                                <div>
+                                    <span class="price-label">Desde</span>
+                                    <strong>$250,000</strong>
+                                </div>
+
+                                <button
+                                    class="btn-small"
+                                    onclick="verDetalles(2)"
+                                >
+                                    Detalles
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Ferrari SF90 -->
+                    <article class="car-card" data-category="deportivo">
+
+                        <div class="car-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1000&q=80"
+                                alt="Ferrari deportivo rojo"
+                            >
+
+                            <span class="car-badge premium">PREMIUM</span>
+                        </div>
+
+                        <div class="car-content">
+
+                            <p class="car-type">DEPORTIVO</p>
+
+                            <h3>Ferrari SF90 Stradale</h3>
+
+                            <p class="car-description">
+                                Tecnología híbrida y prestaciones extraordinarias.
+                            </p>
+
+                            <div class="specifications">
+                                <span>⚡ 1000 CV</span>
+                                <span>🏁 340 km/h</span>
+                            </div>
+
+                            <div class="car-bottom">
+
+                                <div>
+                                    <span class="price-label">Desde</span>
+                                    <strong>$550,000</strong>
+                                </div>
+
+                                <button
+                                    class="btn-small"
+                                    onclick="verDetalles(3)"
+                                >
+                                    Detalles
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Ferrari Purosangue -->
+                    <article class="car-card" data-category="suv">
+
+                        <div class="car-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=80"
+                                alt="Automóvil SUV"
+                            >
+                        </div>
+
+                        <div class="car-content">
+
+                            <p class="car-type">SUV</p>
+
+                            <h3>Ferrari Purosangue</h3>
+
+                            <p class="car-description">
+                                Una nueva interpretación del automóvil deportivo de cuatro puertas.
+                            </p>
+
+                            <div class="specifications">
+                                <span>⚡ 725 CV</span>
+                                <span>🏁 310 km/h</span>
+                            </div>
+
+                            <div class="car-bottom">
+
+                                <div>
+                                    <span class="price-label">Desde</span>
+                                    <strong>$400,000</strong>
+                                </div>
+
+                                <button
+                                    class="btn-small"
+                                    onclick="verDetalles(4)"
+                                >
+                                    Detalles
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Ferrari 12Cilindri -->
+                    <article class="car-card" data-category="gt">
+
+                        <div class="car-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1000&q=80"
+                                alt="Ferrari deportivo"
+                            >
+                        </div>
+
+                        <div class="car-content">
+
+                            <p class="car-type">GT</p>
+
+                            <h3>Ferrari 12Cilindri</h3>
+
+                            <p class="car-description">
+                                Una experiencia GT enfocada en el motor de doce cilindros.
+                            </p>
+
+                            <div class="specifications">
+                                <span>⚡ 830 CV</span>
+                                <span>🏁 340 km/h</span>
+                            </div>
+
+                            <div class="car-bottom">
+
+                                <div>
+                                    <span class="price-label">Desde</span>
+                                    <strong>$420,000</strong>
+                                </div>
+
+                                <button
+                                    class="btn-small"
+                                    onclick="verDetalles(5)"
+                                >
+                                    Detalles
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Ferrari 812 -->
+                    <article class="car-card" data-category="deportivo">
+
+                        <div class="car-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1566023888470-8a1c0d9e4e95?auto=format&fit=crop&w=1000&q=80"
+                                alt="Ferrari deportivo"
+                            >
+                        </div>
+
+                        <div class="car-content">
+
+                            <p class="car-type">DEPORTIVO</p>
+
+                            <h3>Ferrari 812 Superfast</h3>
+
+                            <p class="car-description">
+                                Potencia y conducción deportiva para una experiencia excepcional.
+                            </p>
+
+                            <div class="specifications">
+                                <span>⚡ 800 CV</span>
+                                <span>🏁 340 km/h</span>
+                            </div>
+
+                            <div class="car-bottom">
+
+                                <div>
+                                    <span class="price-label">Desde</span>
+                                    <strong>$380,000</strong>
+                                </div>
+
+                                <button
+                                    class="btn-small"
+                                    onclick="verDetalles(6)"
+                                >
+                                    Detalles
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= COLLEZIONI ================= -->
+
+<section class="collections section" id="colecciones">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <p class="section-subtitle">
+                COLLEZIONI
+            </p>
+
+            <h2>
+                UNA COLECCIÓN<br>
+                EXTRAORDINARIA
+            </h2>
+
+            <p>
+                Descubre una selección especial de automóviles
+                que representan diseño, innovación y rendimiento.
+            </p>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+            <div class="collection-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1200&q=80"
+                    alt="Ferrari deportivo"
+                >
+
+                <div class="collection-overlay">
+
+                    <span>01</span>
+
+                    <h3>SPORT SERIES</h3>
+
+                    <p>
+                        Deportividad y rendimiento.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="collection-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&q=80"
+                    alt="Ferrari de alto rendimiento"
+                >
+
+                <div class="collection-overlay">
+
+                    <span>02</span>
+
+                    <h3>ICON SERIES</h3>
+
+                    <p>
+                        Modelos que representan la pasión.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="collection-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80"
+                    alt="Ferrari GT"
+                >
+
+                <div class="collection-overlay">
+
+                    <span>03</span>
+
+                    <h3>GRAND TOURING</h3>
+
+                    <p>
+                        Elegancia y confort.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ================= NOSOTROS ================= -->
+        <section class="about section" id="nosotros">
+
+            <div class="container about-grid">
+
+                <div class="about-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=1200&q=80"
+                        alt="Automóvil deportivo"
+                    >
+                </div>
+
+                <div class="about-content">
+
+                    <p class="section-subtitle">SOBRE NOSOTROS</p>
+
+                    <h2>Pasión por los automóviles</h2>
+
+                    <p>
+                        Ferrari Store es un proyecto web académico creado para
+                        representar un concesionario virtual especializado en
+                        automóviles deportivos.
+                    </p>
+
+                    <p>
+                        Nuestra propuesta busca ofrecer una experiencia sencilla
+                        para explorar modelos, consultar características y
+                        simular una compra.
+                    </p>
+
+                    <div class="about-list">
+
+                        <div>
+                            <span>✓</span>
+                            <p>Catálogo de vehículos</p>
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            <p>Simulación de compra</p>
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            <p>Cálculo automático del precio</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+ <!-- ================= EXPERIENCIAS ================= -->
+
+<section class="experiences section" id="experiencias">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <p class="section-subtitle">
+                EXPERIENCIAS
+            </p>
+
+            <h2>
+                VIVE LA EXPERIENCIA
+            </h2>
+
+            <p>
+                Más que comprar un automóvil, descubre una experiencia
+                diseñada para los amantes de la velocidad y el diseño.
+            </p>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+            <div class="experience-card">
+
+                <div class="experience-number">
+                    01
+                </div>
+
+                <div class="experience-icon">
+                    🏎️
+                </div>
+
+                <h3>
+                    DESCUBRE
+                </h3>
+
+                <p>
+                    Explora nuestro catálogo y conoce las características
+                    de cada vehículo.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="experience-number">
+                    02
+                </div>
+
+                <div class="experience-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    SELECCIONA
+                </h3>
+
+                <p>
+                    Elige el modelo que mejor se adapte a tus preferencias.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="experience-number">
+                    03
+                </div>
+
+                <div class="experience-icon">
+                    💳
+                </div>
+
+                <h3>
+                    COMPRA
+                </h3>
+
+                <p>
+                    Simula tu compra y calcula automáticamente el precio final.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="experience-number">
+                    04
+                </div>
+
+                <div class="experience-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    DISFRUTA
+                </h3>
+
+                <p>
+                    Completa el proceso y disfruta de tu experiencia Ferrari.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ================= CONTACTO ================= -->
+        <section class="contact section" id="contacto">
+
+            <div class="container contact-grid">
+
+                <div class="contact-info">
+
+                    <p class="section-subtitle">CONTACTO</p>
+
+                    <h2>¿Tienes alguna consulta?</h2>
+
+                    <p>
+                        Completa el formulario y nos pondremos en contacto contigo.
+                    </p>
+
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <div>
+                            <strong>Ubicación</strong>
+                            <p>Showroom virtual</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <div>
+                            <strong>Correo</strong>
+                            <p>contacto@ferraristore.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <div>
+                            <strong>Teléfono</strong>
+                            <p>+51 999 999 999</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <form class="contact-form" onsubmit="enviarContacto(event)">
+
+                    <div class="form-group">
+                        <label for="nombreContacto">Nombre completo</label>
+                        <input
+                            type="text"
+                            id="nombreContacto"
+                            placeholder="Ingresa tu nombre"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correoContacto">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correoContacto"
+                            placeholder="ejemplo@correo.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensajeContacto">Mensaje</label>
+                        <textarea
+                            id="mensajeContacto"
+                            rows="5"
+                            placeholder="Escribe tu mensaje..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        ENVIAR MENSAJE
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+                <a href="#inicio" class="logo footer-logo">
+                    <span class="logo-icon">🐎</span>
+                    <span>FERRARI STORE</span>
+                </a>
+
+                <p>
+                    Concesionario virtual desarrollado como proyecto académico.
+                </p>
+            </div>
+
+            <div>
+                <h3>Enlaces</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#modelos">Modelos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div>
+                <h3>Proyecto</h3>
+                <p>Algoritmos para la solución de problemas</p>
+                <p>Actividad de Aprendizaje 1</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Ferrari Store — Proyecto académico
+            </p>
+        </div>
+
+    </footer>
+
+
+    <!-- ================= MODAL DETALLES ================= -->
+    <div class="modal" id="modalDetalles">
+
+        <div class="modal-content">
+
+            <button class="modal-close" onclick="cerrarModal('modalDetalles')">
+                ×
+            </button>
+
+            <div id="detalleContenido"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MODAL COMPRA ================= -->
+    <div class="modal" id="modalCompra">
+
+        <div class="modal-content compra-modal">
+
+            <button class="modal-close" onclick="cerrarModal('modalCompra')">
+                ×
+            </button>
+
+            <p class="section-subtitle">PROCESO DE COMPRA</p>
+
+            <h2>Comprar vehículo</h2>
+
+            <form id="formCompra" onsubmit="procesarCompra(event)">
+
+                <div class="selected-car" id="autoSeleccionado">
+                    Selecciona un vehículo
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidad">Cantidad</label>
+
+                    <input
+                        type="number"
+                        id="cantidad"
+                        min="1"
+                        value="1"
+                        onchange="calcularPrevisualizacion()"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="clienteNombre">Nombre completo</label>
+
+                    <input
+                        type="text"
+                        id="clienteNombre"
+                        placeholder="Nombre y apellidos"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="clienteCorreo">Correo electrónico</label>
+
+                    <input
+                        type="email"
+                        id="clienteCorreo"
+                        placeholder="correo@ejemplo.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="metodoPago">Método de pago</label>
+
+                    <select id="metodoPago" required>
+                        <option value="">Seleccionar</option>
+                        <option value="contado">Pago al contado</option>
+                        <option value="financiamiento">Financiamiento</option>
+                    </select>
+                </div>
+
+                <div class="price-preview" id="precioPreview">
+                    Selecciona un vehículo para calcular el precio.
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                    CONFIRMAR COMPRA
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MODAL CARRITO ================= -->
+    <div class="modal" id="modalCarrito">
+
+        <div class="modal-content">
+
+            <button class="modal-close" onclick="cerrarModal('modalCarrito')">
+                ×
+            </button>
+
+            <p class="section-subtitle">MI CARRITO</p>
+
+            <h2>Vehículos seleccionados</h2>
+
+            <div id="contenidoCarrito"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MODAL RESULTADO ================= -->
+    <div class="modal" id="modalResultado">
+
+        <div class="modal-content result-modal">
+
+            <div class="success-icon">✓</div>
+
+            <h2>Compra procesada</h2>
+
+            <div id="resultadoCompra"></div>
+
+            <button
+                class="btn btn-primary btn-full"
+                onclick="cerrarModal('modalResultado')"
+            >
+                CONTINUAR
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
