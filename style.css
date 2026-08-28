@@ -1,0 +1,1259 @@
+/* =====================================================
+   FERRARI STORE
+   HOJA DE ESTILOS
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #ffffff;
+    color: #171717;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+
+/* ================= HEADER ESTILO FERRARI ================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    background: #181818;
+    color: white;
+    border-bottom: 1px solid #252525;
+}
+
+.nav-container {
+    width: 100%;
+    height: 70px;
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+}
+
+.ferrari-logo {
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+
+.nav a {
+    position: relative;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #cccccc;
+}
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* Ocultamos el botón de carrito */
+
+.cart-button {
+    display: none;
+}
+
+
+/* Menú móvil */
+
+.menu-button {
+    display: none;
+    margin-left: auto;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 25px;
+
+        background: #181818;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .ferrari-logo {
+        width: auto;
+    }
+
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.15)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.hero-subtitle,
+.section-subtitle {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    color: #ffcc00;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #ffcc00;
+}
+
+.hero-text {
+    max-width: 550px;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+
+/* ================= BOTONES ================= */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    padding: 15px 28px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #ffcc00;
+    color: #111;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.92);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    background: #111111;
+    color: white;
+    padding: 55px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+
+/* ================= SECTION HEADER ================= */
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-subtitle {
+    color: #b08b00;
+}
+
+.section-header h2,
+.about-content h2,
+.contact-info h2,
+.modal-content h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.section-header > p:last-child {
+    color: #666;
+}
+
+
+/* ================= FILTROS ================= */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.filter {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.filter:hover,
+.filter.active {
+    background: #111;
+    color: white;
+}
+
+
+/* ================= MODELOS ================= */
+
+.models {
+    background: #f7f7f7;
+}
+
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.13);
+}
+
+.car-image {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.05);
+}
+
+.car-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ffcc00;
+    color: #111;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.car-badge.premium {
+    background: #111;
+    color: white;
+}
+
+.car-content {
+    padding: 25px;
+}
+
+.car-type {
+    color: #b08b00;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.car-content h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.car-description {
+    color: #666;
+    font-size: 13px;
+    min-height: 62px;
+}
+
+.specifications {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 18px 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.car-bottom {
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.price-label {
+    display: block;
+    color: #888;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.car-bottom strong {
+    font-size: 19px;
+}
+
+.btn-small {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.btn-small:hover {
+    background: #333;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-image {
+    height: 520px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content > p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-list {
+    margin-top: 30px;
+}
+
+.about-list div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.about-list span {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffcc00;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+/* ================= PROCESS ================= */
+
+.process {
+    background: #111;
+    color: white;
+}
+
+.process .section-subtitle {
+    color: #ffcc00;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    border: 1px solid #333;
+    padding: 30px;
+    min-height: 200px;
+}
+
+.process-card > span {
+    color: #ffcc00;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.process-card h3 {
+    font-size: 22px;
+    margin: 20px 0 10px;
+}
+
+.process-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* ================= CONTACTO ================= */
+
+.contact {
+    background: #f7f7f7;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+}
+
+.contact-info > p:not(.section-subtitle) {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.contact-item > span {
+    font-size: 25px;
+}
+
+.contact-item strong {
+    font-size: 14px;
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 13px;
+}
+
+.contact-form {
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 13px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 13px;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #111;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #080808;
+    color: white;
+    padding-top: 65px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-grid > div > p {
+    color: #888;
+    font-size: 13px;
+    max-width: 350px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+}
+
+.footer-grid a {
+    display: block;
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.footer-grid a:hover {
+    color: #ffcc00;
+}
+
+.footer-grid div > p + p {
+    margin-top: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 11px;
+}
+
+
+/* ================= MODALES ================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    width: min(700px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 40px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    border: none;
+    background: transparent;
+    font-size: 32px;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal-close:hover {
+    color: #111;
+}
+
+
+/* ================= DETALLES ================= */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.detail-image {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.detail-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-info h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.detail-info p {
+    color: #666;
+    font-size: 14px;
+}
+
+.detail-specs {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.detail-spec {
+    background: #f5f5f5;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.detail-spec strong {
+    display: block;
+    font-size: 15px;
+}
+
+
+/* ================= COMPRA ================= */
+
+.selected-car {
+    background: #f5f5f5;
+    padding: 18px;
+    margin: 20px 0;
+    border-left: 4px solid #ffcc00;
+    font-weight: 700;
+}
+
+.price-preview {
+    background: #111;
+    color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.price-row.total {
+    border-top: 1px solid #444;
+    margin-top: 12px;
+    padding-top: 12px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.discount {
+    color: #ffcc00;
+}
+
+
+/* ================= CARRITO ================= */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h4 {
+    margin-bottom: 4px;
+}
+
+.cart-item-info p {
+    color: #777;
+    font-size: 12px;
+}
+
+.cart-remove {
+    border: none;
+    background: #111;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 40px 10px;
+    color: #777;
+}
+
+
+/* ================= RESULTADO ================= */
+
+.result-modal {
+    text-align: center;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    background: #ffcc00;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.result-box {
+    background: #f5f5f5;
+    text-align: left;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 5px;
+}
+
+.result-box p {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .models-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .cart-button {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .models-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        padding: 25px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
+
+/* =====================================================
+   RACING
+   ===================================================== */
+
+.racing-section {
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    background-image: url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.racing-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.2)
+        );
+}
+
+.racing-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 650px;
+}
+
+.racing-content h2 {
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.racing-content h2 span {
+    color: #ffcc00;
+}
+
+.racing-content > p:not(.section-subtitle) {
+    max-width: 550px;
+
+    color: #ddd;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   COLLEZIONI
+   ===================================================== */
+
+.collections {
+    background: #111;
+    color: white;
+}
+
+.collections .section-header > p:last-child {
+    color: #aaa;
+}
+
+.collections .section-subtitle {
+    color: #ffcc00;
+}
+
+.collection-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.collection-card {
+    height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+
+.collection-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s;
+}
+
+.collection-card:hover img {
+    transform: scale(1.08);
+}
+
+.collection-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.9)
+        );
+}
+
+.collection-overlay span {
+    color: #ffcc00;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.collection-overlay h3 {
+    font-size: 24px;
+
+    margin: 8px 0;
+}
+
+.collection-overlay p {
+    color: #ccc;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   EXPERIENCES
+   ===================================================== */
+
+.experiences {
+    background: #f5f5f5;
+}
+
+.experience-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.experience-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    min-height: 280px;
+
+    border: 1px solid #e5e5e5;
+
+    transition: 0.3s;
+
+    position: relative;
+}
+
+.experience-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.1);
+}
+
+.experience-number {
+    color: #999;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.experience-icon {
+    font-size: 38px;
+
+    margin: 25px 0 15px;
+}
+
+.experience-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 12px;
+}
+
+.experience-card p {
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .collection-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
